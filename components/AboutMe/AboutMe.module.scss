@@ -1,11 +1,17 @@
 .about {
-    display: flex;
-    flex-direction: column;
 
+    .title {
+        h3 {
+            color: var(--green-tint);
+        }
 
-    .title {}
+    }
 
     .content {
+        display: flex;
+        flex-direction: row;
+
+
         #left {}
 
         #right {}

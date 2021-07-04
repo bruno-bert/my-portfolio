@@ -8,16 +8,16 @@ export const Experience = (props: Props) => {
 
         <section className={styles.experience}>
 
-            <div className="title">
+            <div className={styles.title}>
                 <h3>
                     <span>02.</span>
                     Where I've Worked
                 </h3>
             </div>
 
-            <div className="content">
+            <div className={styles.content}>
 
-                <div id="menu-left">
+                <div id="left">
                     <ul>
                         <li><a href="#jnj">Johnson&amp;Johnson</a></li>
                         <li><a href="#bg">BigSist</a></li>
@@ -26,7 +26,7 @@ export const Experience = (props: Props) => {
                     </ul>
                 </div >
 
-                <div id="content-right">
+                <div id="right">
                     <h2>
                         Lorem, ipsum dolor.
                         <span>Highlighted</span>

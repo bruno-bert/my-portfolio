@@ -1,6 +1,4 @@
 .experience {
-    display: flex;
-    flex-direction: column;
 
     .title {
         span {
@@ -11,11 +9,11 @@
     .content {
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
-        #menu-left {}
+        #left {}
 
-        #content-right {}
+        #right {}
 
 
     }

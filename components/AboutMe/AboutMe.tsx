@@ -1,4 +1,5 @@
 import styles from './AboutMe.module.scss'
+import Image from 'next/image'
 interface Props {
 
 }
@@ -9,15 +10,17 @@ export const AboutMe = (props: Props) => {
         <section className={styles.about}>
 
 
-            <div className="title">
+            <div className={styles.title}>
                 <h3>
                     <span>01.</span>
                     About Me
                 </h3>
             </div>
 
-            <div className="content">
+            <div className={styles.content}>
                 <div id="left">
+
+
 
 
                     <p>
@@ -41,12 +44,15 @@ export const AboutMe = (props: Props) => {
 
 
                 </div>
+
+
+                <div id="right">
+                    <Image src="/me.jpg" alt="me" width={100} height={200} />
+
+                </div>
             </div>
 
-            <div id="right">
-                <img src="" alt="" />
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, fuga.</p>
-            </div>
+
 
 
 
