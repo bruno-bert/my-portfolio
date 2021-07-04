@@ -1,0 +1,12 @@
+.hamburguer {
+
+    display: flex;
+    flex-direction: column;
+    width: 42px;
+    height: 42px;
+
+
+    span {
+        line-height: 5px;
+    }
+}
