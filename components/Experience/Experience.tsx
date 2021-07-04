@@ -6,18 +6,42 @@ interface Props {
 export const Experience = (props: Props) => {
     return (
 
-        <section className={styles.about}>
-            <div>
+        <section className={styles.experience}>
+
+            <div className="title">
                 <h3>
                     <span>02.</span>
-                    Experience
+                    Where I've Worked
                 </h3>
             </div>
 
-            <p>
-                Experience Content
+            <div className="content">
 
-            </p>
+                <div id="menu-left">
+                    <ul>
+                        <li><a href="#jnj">Johnson&amp;Johnson</a></li>
+                        <li><a href="#bg">BigSist</a></li>
+                        <li><a href="#sc">SyncCell</a></li>
+                        <li><a href="#fit">FitSoft</a></li>
+                    </ul>
+                </div >
+
+                <div id="content-right">
+                    <h2>
+                        Lorem, ipsum dolor.
+                        <span>Highlighted</span>
+                    </h2>
+                    <p id="period">December 2014 until today</p>
+                    <ul id="tasks">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
 
         </section>
     )

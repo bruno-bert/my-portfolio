@@ -1,4 +1,24 @@
 .experience {
     display: flex;
     flex-direction: column;
+
+    .title {
+        span {
+            color: var(--green-tint)
+        }
+    }
+
+    .content {
+
+        display: flex;
+        flex-direction: column;
+
+        #menu-left {}
+
+        #content-right {}
+
+
+    }
+
+
 }
