@@ -1,6 +1,16 @@
 .project {
+
+    display: flex;
+    flex-direction: row;
+
+
+
     .links {
         display: flex;
         flex-direction: row;
     }
+}
+
+.reverse {
+    flex-direction: row-reverse;
 }

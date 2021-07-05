@@ -71,7 +71,7 @@ export const Work = (props: Props) => {
 
             {projects.map((item, index) =>
             (
-                <Project key={index} data={item} />
+                < Project key={index} data={item} />
             )
             )}
 

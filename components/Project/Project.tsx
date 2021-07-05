@@ -8,9 +8,11 @@ interface Props {
 
 const Project = (props: Props) => {
     const { data } = props
+    const reverse = data.imagePosition == 'left' ? '' : styles.reverse
+
     return (
 
-        <div className={styles.project}>
+        <div className={`${styles.project} ${reverse}`}>
 
 
             <div id="image">
