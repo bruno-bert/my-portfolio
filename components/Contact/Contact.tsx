@@ -20,7 +20,11 @@ export const Contact = (props: Props) => {
                 Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi,
                 I'll try my best to get back to you!
             </p>
-            <Button>Say Hello</Button>
+            <Button>
+                <a target="_blank" href="https://wa.me/5512991229818?text=Hello!">
+                    Say Hello
+                </a>
+            </Button>
 
         </section>
     )
