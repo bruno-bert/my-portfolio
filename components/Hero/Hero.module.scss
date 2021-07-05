@@ -2,6 +2,45 @@
     display: flex;
     flex-direction: column;
 
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 200px;
+    height: 100vh;
+
+    &>* {
+        padding: 1rem;
+    }
+
+    .p1 {
+        padding-bottom: 0.5rem;
+        color: var(--green);
+        font-size: var(--fz-md);
+        letter-spacing: 0.1rem;
+    }
+
+    .name {
+        color: var(--lightest-slate);
+        font-size: var(--fz-heading);
+    }
+
+    .subtitle {
+        color: var(--slate);
+        font-size: var(--fz-heading);
+    }
+
+    .description {
+        width: 60%;
+        font-size: var(--fz-xl);
+        line-height: 2rem;
+    }
+
+    .cta {
+        padding-top: 3rem;
+    }
+
+
+
 
 
 }

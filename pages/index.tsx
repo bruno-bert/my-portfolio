@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Bruno Bertoni</title>
+        <title>Bruno Bertoni Portfolio</title>
         <meta name="description" content="Bruno Bertoni Personal Portfolio" />
         <link rel="icon" href="/favicon.ico" />
 

@@ -11,14 +11,14 @@
 
 .menu li {
     padding: 10px;
-
     line-height: 50px;
 
     font-size: var(--fz-xs);
 
     span {
-        color: var(--light-slate);
-        font-weight: 600;
+        color: var(--lightest-slate);
+
+        //letter-spacing: 0.1rem;
 
 
         :hover {

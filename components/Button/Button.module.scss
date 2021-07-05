@@ -1,17 +1,29 @@
 .button {
-    padding: 15px 20px 10px 20px;
+
     text-decoration: none;
     font-family: var(--font-mono);
     border: 1px solid var(--green);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     color: var(--green);
-    font-size: var(--fz-xs);
-    line-height: 30px;
-
 
 
     &:hover {
         background-color: var(--green-tint);
         cursor: pointer;
     }
+
+    //sizes    
+
+    //standard
+    font-size: var(--fz-xs);
+    padding: 15px 20px 10px 20px;
+    line-height: 30px;
+
+
+}
+
+.large {
+    font-size: var(--fz-lg);
+    padding: 20px 25px 15px 25px;
+    line-height: 35px;
 }
