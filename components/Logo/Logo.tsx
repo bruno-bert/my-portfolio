@@ -1,5 +1,5 @@
 import styles from './Logo.module.scss'
-
+import Link from 'next/link'
 interface Props {
 
 }
@@ -7,7 +7,10 @@ interface Props {
 const Logo = (props: Props) => {
     return (
         <div className={styles.logoWrapper}>
-            B
+            <Link href="#hero">
+                B
+            </Link>
+
         </div>
 
     )

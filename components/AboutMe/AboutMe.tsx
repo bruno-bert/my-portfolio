@@ -7,7 +7,7 @@ interface Props {
 export const AboutMe = (props: Props) => {
     return (
 
-        <section className={styles.about}>
+        <section id="aboutme" className={styles.about}>
 
 
             <div className={styles.title}>

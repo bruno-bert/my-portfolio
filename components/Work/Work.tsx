@@ -59,7 +59,7 @@ const projects: ProjectData[] = [
 export const Work = (props: Props) => {
     return (
 
-        <section className={styles.about}>
+        <section id="work" className={styles.about}>
             <div>
                 <h3>
                     <span>03.</span>

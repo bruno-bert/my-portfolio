@@ -1,6 +1,6 @@
 import Button from '../Button/Button'
 import HamburguerMenu from '../Header/HamburguerMenu/HamburguerMenu'
-
+import Link from 'next/link'
 import styles from './Menu.module.scss'
 interface Props {
 
@@ -14,23 +14,25 @@ const Menu = (props: Props) => {
             <ul className={styles.menu}>
                 <li>
                     <span>01.</span>
-                    <span>About</span>
+                    <span><Link href="#aboutme">About Me</Link></span>
+
                 </li>
                 <li>
                     <span>02.</span>
-                    <span>Experience</span>
+                    <span><Link href="#experience">Experience</Link></span>
+
                 </li>
                 <li>
                     <span>03.</span>
-                    <span>Work</span>
+                    <span><Link href="#work">Work</Link></span>
                 </li>
                 <li>
                     <span>04.</span>
-                    <span>Contact</span>
+                    <span><Link href="#contact">Contact</Link></span>
                 </li>
                 <li>
                     <span>05.</span>
-                    <span>Blog</span>
+                    <span><Link href="#blog">Blog</Link></span>
                 </li>
                 <li>
                     <Button>Resume</Button>

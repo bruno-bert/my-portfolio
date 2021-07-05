@@ -6,7 +6,7 @@ interface Props {
 export const Hero = (props: Props) => {
     return (
 
-        <section className={styles.hero}>
+        <section id="hero" className={styles.hero}>
             <p>Hi, my name is</p>
             <h1>Bruno Bertoni</h1>
             <h2>I build applications and websites</h2>

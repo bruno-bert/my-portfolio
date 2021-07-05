@@ -6,7 +6,7 @@ interface Props {
 export const Experience = (props: Props) => {
     return (
 
-        <section className={styles.experience}>
+        <section id="experience" className={styles.experience}>
 
             <div className={styles.title}>
                 <h3>
