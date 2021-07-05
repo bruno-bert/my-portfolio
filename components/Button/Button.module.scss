@@ -1,0 +1,17 @@
+.button {
+    padding: 15px 20px 10px 20px;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    color: var(--green);
+    font-size: var(--fz-xs);
+    line-height: 30px;
+
+
+
+    &:hover {
+        background-color: var(--green-tint);
+        cursor: pointer;
+    }
+}

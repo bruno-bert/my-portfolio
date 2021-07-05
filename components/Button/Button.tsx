@@ -1,3 +1,4 @@
+import styles from './Button.module.scss'
 interface Props {
 
     children: JSX.Element | string
@@ -5,10 +6,10 @@ interface Props {
 
 const Button = ({ children }: Props) => {
     return (
-        <button>
+        <a className={styles.button}>
             {children}
 
-        </button>
+        </a>
     )
 }
 

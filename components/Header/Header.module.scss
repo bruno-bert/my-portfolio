@@ -2,4 +2,21 @@
     display: flex;
     justify-content: space-between;
 
+    padding: 5px 20px;
+    background-color: var(--navy);
+
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+
+
+    .shadow {
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+
+
 }

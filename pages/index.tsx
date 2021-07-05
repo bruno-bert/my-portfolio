@@ -7,6 +7,7 @@ export default function Home() {
         <title>Bruno Bertoni</title>
         <meta name="description" content="Bruno Bertoni Personal Portfolio" />
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
       <main>
