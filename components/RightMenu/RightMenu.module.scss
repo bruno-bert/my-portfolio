@@ -1,4 +1,35 @@
-.righMenu {
+.rightMenu {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    padding: 0;
+    bottom: 200px;
+    right: -60px;
+    left: auto;
+
+
+    z-index: 1000;
+    transform: rotate(90deg);
+
+    div {
+
+        &::after {
+            content: "";
+            border-top: solid 1px var(--light-slate);
+            padding-left: 200px;
+            padding-top: 30px;
+            margin-left: 20px;
+            top: 10px;
+            position: absolute;
+        }
+    }
+
+
+
+
+
+
+
+
+
 }

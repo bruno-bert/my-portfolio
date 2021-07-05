@@ -1,4 +1,39 @@
 .leftMenu {
     display: flex;
     flex-direction: column;
+    position: fixed;
+
+    padding: 0;
+    left: 40px;
+    right: auto;
+    bottom: 200px;
+    z-index: 1000;
+
+
+
+    ul {
+
+
+        height: 100%;
+        padding: 0;
+
+
+
+        li {
+            padding: 15px 0;
+
+        }
+
+        &::after {
+            content: "";
+            border-left: solid 1px var(--light-slate);
+            margin-top: 400px;
+            margin-left: 7px;
+            padding-bottom: 200px;
+
+        }
+
+    }
+
+
 }

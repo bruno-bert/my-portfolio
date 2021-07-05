@@ -11,7 +11,7 @@ interface Props {
 
 export const Layout = (props: Props) => {
     return (
-        <>
+        <div className={styles.layout}>
             <Header />
 
             <LeftMenu />
@@ -21,6 +21,6 @@ export const Layout = (props: Props) => {
             <RightMenu />
 
             <Footer />
-        </>
+        </div>
     )
 }

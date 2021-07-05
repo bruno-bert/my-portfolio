@@ -32,7 +32,7 @@ const Menu = (props: Props) => {
                 </li>
                 <li>
                     <span>05.</span>
-                    <span><Link href="#blog">Blog</Link></span>
+                    <span><Link href="/blog">Blog</Link></span>
                 </li>
                 <li>
                     <Button>Resume</Button>
@@ -40,7 +40,7 @@ const Menu = (props: Props) => {
             </ul>
 
 
-            <HamburguerMenu />
+            {/*  <HamburguerMenu /> */}
         </>
     )
 }
