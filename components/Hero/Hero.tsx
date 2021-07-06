@@ -21,7 +21,13 @@ export const Hero = (props: Props) => {
             </p>
 
             <div className={styles.cta}>
-                <Button large={true}>Get In Touch</Button>
+                <Button large={true}>
+
+                    <a target="_blank" href="https://wa.me/5512991229818?text=Hello!">
+                        Get In Touch!
+                    </a>
+
+                </Button>
             </div>
 
         </section>

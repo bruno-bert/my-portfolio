@@ -1,4 +1,53 @@
 .work {
+
     display: flex;
     flex-direction: column;
+
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10%;
+
+
+    .title {
+
+        padding-bottom: 2rem;
+
+
+        h3 {
+            position: relative;
+            font-size: var(--font-size-section-title);
+            color: var(--lightest-slate);
+            overflow: hidden;
+
+            span {
+                color: var(--green);
+                margin-right: 10px;
+            }
+
+
+            &::after {
+                content: '';
+                width: 90%;
+                position: absolute;
+                margin-left: 30px;
+                top: 15px;
+                border-top: 1px solid var(--slate);
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+    .content {
+        display: flex;
+        flex-direction: row;
+
+    }
 }

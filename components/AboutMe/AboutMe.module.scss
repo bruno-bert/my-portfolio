@@ -1,17 +1,93 @@
 .about {
 
-    .title {
-        h3 {}
+    display: flex;
+    flex-direction: column;
 
-    }
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10%;
+
+
+
+
 
     .content {
         display: flex;
         flex-direction: row;
 
 
-        #left {}
+        .left {
 
-        #right {}
+            width: 70%;
+
+            .title {
+
+                padding-bottom: 2rem;
+
+
+                h3 {
+                    position: relative;
+                    font-size: var(--font-size-section-title);
+                    color: var(--lightest-slate);
+                    overflow: hidden;
+
+                    span {
+                        color: var(--green);
+                        margin-right: 10px;
+                    }
+
+
+                    &::after {
+                        content: '';
+                        width: 90%;
+                        position: absolute;
+                        margin-left: 30px;
+                        top: 15px;
+                        border-top: 1px solid var(--slate);
+                    }
+
+                }
+
+
+            }
+
+            .description {
+                padding-bottom: 2rem;
+                font-size: var(--font-size-description);
+            }
+
+            .skills {
+                font-size: var(--font-size-small);
+                -moz-column-count: 2;
+                -moz-column-gap: 20px;
+                -webkit-column-count: 2;
+                -webkit-column-gap: 50px;
+                column-count: 2;
+                column-gap: 50px;
+                font-family: var(--font-mono);
+
+                li {
+
+                    padding: 5px;
+                    position: relative;
+
+                    &::before {
+                        content: "▹";
+                        position: absolute;
+                        left: -10px;
+                        color: var(--green);
+                        font-size: var(--fz-sm);
+                        line-height: 12px;
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            padding: 5%;
+
+        }
     }
 }

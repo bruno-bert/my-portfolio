@@ -1,18 +1,93 @@
 .experience {
 
-    .title {}
+    display: flex;
+    flex-direction: column;
 
-    .content {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10%;
 
-        display: flex;
-        flex-direction: row;
 
-        #left {}
+    .title {
 
-        #right {}
+        padding-bottom: 2rem;
+
+
+        h3 {
+            position: relative;
+            font-size: var(--font-size-section-title);
+            color: var(--lightest-slate);
+            overflow: hidden;
+
+            span {
+                color: var(--green);
+                margin-right: 10px;
+            }
+
+
+            &::after {
+                content: '';
+                width: 90%;
+                position: absolute;
+                margin-left: 30px;
+                top: 15px;
+                border-top: 1px solid var(--slate);
+            }
+
+        }
 
 
     }
 
 
+
+
+
+
+    .content {
+        display: flex;
+        flex-direction: row;
+
+        .left {
+
+            ul {
+                border-left: 1px solid var(--lightest-navy);
+                font-family: var(--font-mono);
+                font-size: var(--fz-sm);
+
+                li {
+
+
+
+                    padding: 20px 10px;
+                    transition: background-color ease-in-out 250ms;
+
+                    &:hover {
+                        background-color: var(--lightest-navy);
+                        color: var(--green);
+                        cursor: pointer;
+                    }
+
+                    &.active {
+                        border-left: 2px solid var(--green);
+                        background-color: var(--lightest-navy);
+                        color: var(--green);
+                        cursor: pointer;
+                    }
+
+
+                }
+
+
+
+            }
+
+        }
+
+        .right {
+            margin-left: 50px;
+        }
+
+    }
 }

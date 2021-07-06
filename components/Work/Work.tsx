@@ -59,8 +59,8 @@ const projects: ProjectData[] = [
 export const Work = (props: Props) => {
     return (
 
-        <section id="work" className={styles.about}>
-            <div>
+        <section id="work" className={styles.work}>
+            <div className={styles.title}>
                 <h3>
                     <span>03.</span>
                     Some Things I've Built!
@@ -68,12 +68,13 @@ export const Work = (props: Props) => {
             </div>
 
 
-
-            {projects.map((item, index) =>
-            (
-                < Project key={index} data={item} />
-            )
-            )}
+            <div className={styles.content}>
+                {projects.map((item, index) =>
+                (
+                    < Project key={index} data={item} />
+                )
+                )}
+            </div>
 
         </section>
     )
