@@ -80,6 +80,10 @@
                         font-size: var(--fz-sm);
                         line-height: 12px;
                     }
+
+                    &:hover {
+                        color: var(--green);
+                    }
                 }
             }
 

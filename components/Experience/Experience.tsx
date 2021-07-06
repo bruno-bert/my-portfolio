@@ -1,12 +1,78 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './Experience.module.scss'
+import ExperienceContent from './ExperienceContent/ExperienceContent'
+
+export type ExperienceData = {
+    name: string,
+    link?: string,
+    title: string
+    period: string
+    tasks: string[]
+}
+
 interface Props {
 
 }
 
+
+const experiences: ExperienceData[] = [{
+    name: 'Johnson&Johnson (1)',
+    title: 'Solution Architect',
+    period: 'October 2020 until now',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellat odit recusandae. Ea quod quia excepturi provident ipsam esse praesentium!',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vero nostrum officiis tenetur consectetur temporibus, ipsam expedita? Tenetur, aliquid exercitationem.'
+    ]
+},
+{
+    name: 'Johnson&Johnson (2)',
+    title: 'Technical Product Owner',
+    period: 'December 2014 - September 2020',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellat odit recusandae. Ea quod quia excepturi provident ipsam esse praesentium!',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vero nostrum officiis tenetur consectetur temporibus, ipsam expedita? Tenetur, aliquid exercitationem.'
+    ]
+},
+{
+    name: 'BigSist',
+    title: 'Senior Developer',
+    period: 'September 2007 - December 2014',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellat odit recusandae. Ea quod quia excepturi provident ipsam esse praesentium!',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vero nostrum officiis tenetur consectetur temporibus, ipsam expedita? Tenetur, aliquid exercitationem.'
+    ]
+}, {
+    name: 'SyncCell',
+    title: 'Senior Developer',
+    period: 'September 2007 - December 2014',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellat odit recusandae. Ea quod quia excepturi provident ipsam esse praesentium!',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vero nostrum officiis tenetur consectetur temporibus, ipsam expedita? Tenetur, aliquid exercitationem.']
+}, {
+    name: 'Engenap',
+    title: 'Developer',
+    period: 'June 2002 - August 2007',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellat odit recusandae. Ea quod quia excepturi provident ipsam esse praesentium!',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum vero nostrum officiis tenetur consectetur temporibus, ipsam expedita? Tenetur, aliquid exercitationem.']
+},
+{
+    name: 'FitSoft (Self-Employee)',
+    title: 'Owner',
+    period: 'September 2007 - December 2014',
+    tasks: [
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat soluta repellendus, quas neque error ipsum harum delectus facilis accusantium?']
+}]
+
 export const Experience = (props: Props) => {
     const [itemActive, setItemActive] = useState(0)
-
 
     return (
 
@@ -23,24 +89,25 @@ export const Experience = (props: Props) => {
 
                 <div id="left" className={styles.left}>
                     <ul>
-                        <li onClick={() => setItemActive(0)} className={(itemActive == 0 ? styles.active : "")}><a href="#jnj">Johnson&amp;Johnson</a></li>
-                        <li onClick={() => setItemActive(1)} className={(itemActive == 1 ? styles.active : "")}><a href="#bg">BigSist</a></li>
-                        <li onClick={() => setItemActive(2)} className={(itemActive == 2 ? styles.active : "")}><a href="#sc">SyncCell</a></li>
-                        <li onClick={() => setItemActive(3)} className={(itemActive == 3 ? styles.active : "")}><a href="#fit">FitSoft</a></li>
+
+
+                        {experiences && experiences.map((exp, index) => (
+                            <li onClick={() => setItemActive(index)} className={(itemActive == index ? styles.active : "")}><a href={exp.link}>{exp.name}</a></li>
+                        )
+                        )}
+
+
+
                     </ul>
                 </div >
 
                 <div id="right" className={styles.right}>
-                    <h2>
-                        Lorem, ipsum dolor.
-                        <span>Highlighted</span>
-                    </h2>
-                    <p id="period">December 2014 until today</p>
-                    <ul id="tasks">
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur quo labore illo? Sapiente hic necessitatibus nam pariatur quis perferendis?</li>
-                    </ul>
+                    {
+                        experiences.filter((item, index) => index === itemActive).map(exp => (
+                            <ExperienceContent key={itemActive} data={exp} />
+                        ))
+                    }
+
                 </div>
 
 
