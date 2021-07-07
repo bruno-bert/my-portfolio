@@ -1,4 +1,79 @@
 .otherwork {
+
     display: flex;
     flex-direction: column;
+
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10%;
+
+
+    .title {
+
+        padding-bottom: 2rem;
+        text-align: center;
+
+
+        h3 {
+            position: relative;
+            font-size: var(--font-size-section-title);
+            color: var(--lightest-slate);
+            text-align: center;
+
+        }
+
+
+        .archive {
+            padding-top: 20px;
+            text-align: center;
+            color: var(--green);
+            position: relative;
+            display: inline-block;
+
+            &::after {
+
+                content: '';
+                position: absolute;
+                width: 0;
+                opacity: 0;
+                background: var(--green);
+                border-bottom: 1px solid var(--green);
+                bottom: 0;
+                left: 0;
+                transition: opacity 200ms ease-in-out, width 300ms ease-in-out;
+
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    width: 100%;
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+
+
+
+}
+
+
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+
+
+
 }

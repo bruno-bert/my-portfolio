@@ -41,7 +41,23 @@ const projects: ProjectData[] = [
         url: "https://jazzetl.netlify.app/",
         git: "https://github.com/bruno-bert/jazz-etl",
         category: 'other'
-    }
+    },
+    {
+        title: 'Concur x SAP Business One Integration',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
+        stack: ['C#', 'AWS', 'DynamoDB', 'Lambda'],
+        url: "https://medium.com/@bruno.bert.jj",
+        git: "https://github.com/bruno-bert",
+        category: 'other'
+    },
+    {
+        title: 'Python Sales Commissions Calculation',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
+        stack: ['Python', 'Pandas', 'MongoDB'],
+        url: "https://medium.com/@bruno.bert.jj",
+        git: "https://github.com/bruno-bert",
+        category: 'other'
+    },
 
 
 ]
@@ -51,20 +67,21 @@ export const OtherWork = (props: Props) => {
     return (
 
         <section className={styles.otherwork}>
-            <div>
+            <div className={styles.title}>
                 <h3>
                     Other Noteworthy Projects!
                 </h3>
-                <h4><Link href="/archive">View the archive</Link></h4>
+                <h4 className={styles.archive}><Link href="/archive">View the archive</Link></h4>
             </div>
 
 
-
-            {projects.map((item, index) =>
-            (
-                <OtherProject key={index} data={item} />
-            )
-            )}
+            <div className={styles.content}>
+                {projects.map((item, index) =>
+                (
+                    <OtherProject key={index} data={item} />
+                )
+                )}
+            </div>
 
         </section>
     )

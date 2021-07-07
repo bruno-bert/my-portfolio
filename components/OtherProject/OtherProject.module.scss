@@ -1,6 +1,89 @@
 .otherproject {
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-navy);
+    font-size: var(--fz-lg);
+    position: relative;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    text-align: left;
+    top: 0;
+
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        top: -10px;
+
+        .title {
+            color: var(--green);
+            cursor: pointer;
+        }
+    }
+
+    .wrapper {
+        &>* {
+            padding: 1rem;
+        }
+    }
+
     .links {
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
+
+        li {
+            padding: 10px;
+        }
     }
+
+
+
+
+    .title {
+        font-size: var(--fz-xxl);
+
+        &:hover {
+            color: var(--green);
+            cursor: pointer;
+        }
+    }
+
+    .description {
+        color: var(--lightest-slate);
+        font-size: var(--fz-lg);
+    }
+
+
+
+    .stack {
+        display: flex;
+        justify-content: flex-start;
+
+
+
+        li {
+            font-family: var(--font-mono);
+            font-size: var(--fz-xs);
+            padding: 0 10px;
+
+            &:last-child {
+                padding-right: 0;
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }

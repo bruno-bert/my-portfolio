@@ -11,27 +11,28 @@ const OtherProject = (props: Props) => {
 
         <div className={styles.otherproject}>
 
-            {(data.url || data.git) &&
-                <ul className={styles.links}>
-                    {data.url && <li><a target="_blank" href={data.url}><FaExternalLinkAlt /></a></li>}
-                    {data.git && <li><a target="_blank" href={data.git} ><FaGithub /></a></li>}
-                </ul>
-            }
+            <a className={styles.wrapper} target="_blank" href={data.url}>
+
+                {(data.url || data.git) &&
+                    <ul className={styles.links}>
+                        {data.url && <li><a target="_blank" href={data.url}><FaExternalLinkAlt /></a></li>}
+                        {data.git && <li><a target="_blank" href={data.git} ><FaGithub /></a></li>}
+                    </ul>
+                }
 
 
-            <h3>{data.title}</h3>
-            <p>{data.description}</p>
+                <h3 className={styles.title}>{data.title}</h3>
+                <p className={styles.description}>{data.description}</p>
 
-            {
-                data.stack &&
-                <ul>
-                    {data.stack.map((stack: string) => {
-                        <li>{stack}</li>
-                    })}
-                </ul>
-            }
+                {
+                    data.stack &&
+                    <ul className={styles.stack}>
+                        {data.stack.map((stack: string) => (<li>{stack}</li>)
+                        )}
+                    </ul>
+                }
 
-
+            </a>
 
 
         </div>
