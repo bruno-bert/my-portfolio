@@ -1,4 +1,44 @@
-.work {
+.contact {
     display: flex;
     flex-direction: column;
+
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 10%;
+
+
+    .subtitle {
+        color: var(--green);
+        font-family: var(--font-mono);
+
+        text-align: center;
+    }
+
+
+    .title {
+        padding: 2rem;
+        text-align: center;
+
+        font-size: var(--font-size-section-title);
+        color: var(--lightest-slate);
+        overflow: hidden;
+
+    }
+
+    .description {
+        width: 90%;
+        margin: 0 auto;
+
+        font-size: var(--fz-xl);
+        text-align: center;
+
+    }
+
+    .button {
+        text-align: center;
+        margin: 60px;
+    }
+
+
 }
