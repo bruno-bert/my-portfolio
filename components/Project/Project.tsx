@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ProjectData } from "../Work/Work"
 import styles from './Project.module.scss'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
@@ -9,16 +10,17 @@ interface Props {
 const Project = (props: Props) => {
     const { data } = props
     const reverse = data.imagePosition == 'left' ? '' : styles.reverse
+    const [fallbackSrc, setFallbackSrc] = useState<string>('')
 
     return (
 
         <div className={`${styles.project} ${reverse}`}>
 
 
-            <div id="image">
+            <div id="image" className={styles.image}>
                 {
                     data.image &&
-                    <Image src={data.image} width={500} height={350} />
+                    <Image src={fallbackSrc !== '' ? fallbackSrc : data.image} width={500} height={350} onError={() => setFallbackSrc('/placeholder.png')} />
                 }
 
                 {!data.image &&
@@ -27,18 +29,16 @@ const Project = (props: Props) => {
             </div>
 
 
-            <div id="content">
+            <div id="content" className={styles.content}>
 
-                <p>Featured Project</p>
-                <h3>{data.title}</h3>
-                <p>{data.description}</p>
+                <p className={styles.featured}>Featured Project</p>
+                <h3 className={styles.title}>{data.title}</h3>
+                <div className={styles.description}>{data.description}</div>
 
                 {
                     data.stack &&
-                    <ul >
-                        {data.stack.map((stack: string) => {
-                            <li>{stack}</li>
-                        })}
+                    <ul className={styles.stack}>
+                        {data.stack.map((stack: string) => (<li>{stack}</li>))}
                     </ul>
                 }
 

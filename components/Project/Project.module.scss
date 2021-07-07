@@ -2,15 +2,107 @@
 
     display: flex;
     flex-direction: row;
+    margin: 20px;
+    margin-bottom: 40px;
 
 
 
-    .links {
-        display: flex;
-        flex-direction: row;
+    .image {
+
+        min-width: 50%;
+        z-index: 1;
+        align-self: center;
+
+
+
     }
-}
 
-.reverse {
-    flex-direction: row-reverse;
+    .content {
+        padding: 30px;
+        text-align: right;
+
+
+        &>* {
+            padding: 1rem;
+        }
+
+        .featured {
+            font-family: var(--font-mono);
+            color: var(--green);
+            font-size: var(--fz-sm);
+            padding-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: var(--font-size-medium);
+
+            &:hover {
+                color: var(--green);
+                cursor: pointer;
+            }
+        }
+
+        .description {
+            padding: 25px;
+            background-color: var(--light-navy);
+            font-size: var(--fz-lg);
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+
+            margin-left: -60px;
+
+
+
+        }
+
+
+
+        .stack {
+            display: flex;
+            justify-content: flex-end;
+
+
+
+            li {
+                font-family: var(--font-mono);
+                font-size: var(--fz-sm);
+                padding: 0 10px;
+
+                &:last-child {
+                    padding-right: 0;
+
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            li {
+                padding: 10px;
+            }
+        }
+
+
+
+
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        .content {
+            .description {
+                margin-right: -60px;
+            }
+        }
+    }
+
+
+
+
 }

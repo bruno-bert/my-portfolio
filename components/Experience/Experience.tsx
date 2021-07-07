@@ -92,7 +92,7 @@ export const Experience = (props: Props) => {
 
 
                         {experiences && experiences.map((exp, index) => (
-                            <li onClick={() => setItemActive(index)} className={(itemActive == index ? styles.active : "")}><a href={exp.link}>{exp.name}</a></li>
+                            <li key={index} onClick={() => setItemActive(index)} className={(itemActive == index ? styles.active : "")}><a href={exp.link}>{exp.name}</a></li>
                         )
                         )}
 

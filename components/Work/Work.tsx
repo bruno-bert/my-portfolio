@@ -19,7 +19,7 @@ export type ProjectData = {
 const projects: ProjectData[] = [
     {
         title: 'Nota Amiga',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
         image: "/project1.jpg",
         stack: ['Python', 'Sqlite', 'Selenium'],
         url: "https://notaamiga.netlify.app",
@@ -29,7 +29,7 @@ const projects: ProjectData[] = [
     },
     {
         title: 'LuckyinLive',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
         image: "/project2.jpg",
         stack: ['NextJs', 'Vercel', 'Selenium'],
         url: "https://luckyinlive.com",
@@ -40,7 +40,7 @@ const projects: ProjectData[] = [
     },
     {
         title: 'MakeUp Website',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, odio.",
         image: "/project3.jpg",
         stack: ['Gatsby', 'GraphQL', 'HTML', 'Css', 'Es6'],
         url: "https://giselebertoni.netlify.app",
