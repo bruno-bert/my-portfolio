@@ -1,11 +1,19 @@
+@import "../../styles/variables";
+
+
 .hero {
     display: flex;
     flex-direction: column;
 
-    width: 50%;
-    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 65%;
+
+
+
     margin: 0 auto;
-    margin-top: 200px;
+    padding: 0;
 
     &>* {
         padding: 1rem;
@@ -40,8 +48,12 @@
         padding-top: 3rem;
     }
 
+    @media (max-width: $breakpoint-md) {
+        width: 90%;
 
-
-
+        .description {
+            width: 90%;
+        }
+    }
 
 }

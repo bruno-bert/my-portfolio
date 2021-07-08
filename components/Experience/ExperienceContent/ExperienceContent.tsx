@@ -22,8 +22,8 @@ const ExperienceContent = (props: Props) => {
             <p id="period" className={styles.period}>{period}</p>
 
             <ul id="tasks" className={styles.tasks}>
-                {tasks.map(task => (
-                    <li>{task}</li>
+                {tasks.map((task, index) => (
+                    <li key={index} >{task}</li>
                 ))}
             </ul>
         </div>

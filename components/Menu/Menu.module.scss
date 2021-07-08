@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .menu {
     display: flex;
     font-family: var(--font-mono);
@@ -28,5 +30,11 @@
 
     span:nth-child(1) {
         color: var(--green);
+    }
+
+
+
+    @media (max-width: $breakpoint-md) {
+        display: none;
     }
 }

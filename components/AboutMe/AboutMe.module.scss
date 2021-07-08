@@ -28,7 +28,7 @@
 
                 h3 {
                     position: relative;
-                    font-size: var(--font-size-section-title);
+                    font-size: var(--fz-section-title-md);
                     color: var(--lightest-slate);
                     overflow: hidden;
 
@@ -54,11 +54,11 @@
 
             .description {
                 padding-bottom: 2rem;
-                font-size: var(--font-size-description);
+                font-size: var(--fz-xxl);
             }
 
             .skills {
-                font-size: var(--font-size-small);
+                font-size: var(--fz-sm);
                 -moz-column-count: 2;
                 -moz-column-gap: 20px;
                 -webkit-column-count: 2;

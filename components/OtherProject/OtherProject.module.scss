@@ -14,7 +14,7 @@
 
     &:hover {
         cursor: pointer;
-        top: -10px;
+        transform: translateY(-10px);
 
         .title {
             color: var(--green);

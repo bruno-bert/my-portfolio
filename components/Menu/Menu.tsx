@@ -40,7 +40,7 @@ const Menu = (props: Props) => {
             </ul>
 
 
-            {/*  <HamburguerMenu /> */}
+            <HamburguerMenu />
         </>
     )
 }

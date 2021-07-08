@@ -1,10 +1,5 @@
-/* @font-face {
-  font-family: 'Calibre';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Calibre Regular'), url('../public/fonts/Calibre-0P3z.woff') format('woff');
-}
- */
+@import "variables";
+
 @import url('http://fonts.cdnfonts.com/css/calibre');
 
 @font-face {
@@ -15,9 +10,9 @@
 }
 
 
-
-
 :root {
+
+  /*  Colors Palette*/
   --dark-navy: #020c1b;
   --navy: #0a192f;
   --light-navy: #112240;
@@ -28,45 +23,60 @@
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
-
-  --shadow: 0 10px 30px -15px var(--navy-shadow);
-
   --green: #64ffda;
   --green-tint: rgba(100, 255, 218, 0.1);
+
+  /*  Font Family*/
   --font-sans: 'Calibre', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-  --fz-xxs: 12px;
-  --fz-xs: 13px;
-  --fz-sm: 14px;
-  --fz-md: 16px;
-  --fz-lg: 18px;
-  --fz-xl: 20px;
-  --fz-xxl: 22px;
+
+  /*  Font Sizes*/
+  --fz-xs: 0.8rem;
+  --fz-sm: 0.9rem;
+  --fz-md: 1rem;
+  --fz-lg: 1.1rem;
+  --fz-xl: 1.2rem;
+  --fz-xxl: 1.4rem;
   --fz-heading: 4.5rem;
-  --fz-section-title: 3rem;
+  --fz-section-title-lg: 3rem;
+  --fz-section-title-md: 2rem;
+  --fz-section-title-sm: 1.8rem;
 
-  --font-size-section-title: 2rem;
-  --font-size-description: 1.3rem;
-  --font-size-small: 0.9rem;
-  --font-size-medium: 1.8rem;
-
-
-
+  /* Decoration Details */
+  --shadow: 0 10px 30px -15px var(--navy-shadow);
   --border-radius: 4px;
+
+  /* Navigation Properties*/
   --nav-height: 100px;
   --nav-scroll-height: 70px;
+
+  /* Tab Properties*/
   --tab-height: 42px;
   --tab-width: 120px;
+
+  /* Animations Properties*/
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --hamburger-width: 30px;
-  --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
-  --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
-  --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  --transition-simple: all 250ms ease-in-out;
+
+
+
+
+
 }
 
 
+@media (max-width: $breakpoint-md) {
+  :root {
+    --fz-heading: 3.5rem;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  :root {
+    --fz-heading: 2.5rem;
+  }
+}
 
 
 
