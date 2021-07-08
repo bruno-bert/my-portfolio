@@ -21,7 +21,7 @@ export const Contact = (props: Props) => {
             </p>
 
             <div className={styles.button}>
-                <Button>
+                <Button large>
                     <a target="_blank" href="https://wa.me/5512991229818?text=Hello!">
                         Say Hello
                     </a>

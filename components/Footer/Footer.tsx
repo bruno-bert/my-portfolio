@@ -5,7 +5,7 @@ interface Props {
 
 export const Footer = (props: Props) => {
     return (
-        <footer>
+        <footer className={styles.footer}>
             <p><a target="_blank" href="https://github.com/bruno-bert">Built by Bruno Bertoni</a></p>
             <p>2021</p>
         </footer>
