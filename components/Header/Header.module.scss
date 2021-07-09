@@ -1,6 +1,31 @@
 @import "../../styles/variables";
 
 .header {
+    --transition-simple: all 250ms ease-in-out;
+    --header-shadow: 0 -10px 20px rgb(170, 170, 170);
+
+    transition: transform 250ms ease-in-out;
+
+
+    &.scrollDown {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    &.scrollUp {
+
+        /* todo - scroll up/down is not working if add the shadow */
+        // filter: drop-shadow(var(--header-shadow));
+
+    }
+
+
+}
+
+.nav {
+
+
+
+
     display: flex;
     justify-content: space-between;
 
@@ -10,14 +35,12 @@
 
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
 
-
-
-
-
     @media (max-width: $breakpoint-md) {}
+
 
 
 }
