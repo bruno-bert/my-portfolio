@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.hamburguer {
+
+
+    display: none;
+
+
+    @media (max-width: $breakpoint-md) {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 15px;
+        cursor: pointer;
+        padding: 0 5px;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            background-color: var(--light-navy);
+            border: 1px dashed var(--green);
+
+        }
+
+        &.opened {
+
+            span {
+                transition: all 200ms ease-in-out;
+                transform: rotate(-45deg) translate(-6px, 6px);
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    width: 35px;
+                    transform: rotate(45deg) translate(-6px, -8px);
+                }
+            }
+        }
+
+        span {
+            width: 35px;
+            height: 3px;
+            background-color: var(--green);
+            margin: 3px;
+            text-align: right;
+
+
+            &:nth-child(2) {
+                width: 25px;
+            }
+
+            &:nth-child(3) {
+                width: 15px;
+            }
+        }
+
+
+    }
+}

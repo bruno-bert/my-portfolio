@@ -1,5 +1,5 @@
 import Button from '../Button/Button'
-import HamburguerMenu from '../Header/HamburguerMenu/HamburguerMenu'
+import HamburguerMenu from '../HamburguerMenu/HamburguerMenu'
 import Link from 'next/link'
 import styles from './Menu.module.scss'
 interface Props {
@@ -41,6 +41,7 @@ const Menu = (props: Props) => {
 
 
             <HamburguerMenu />
+
         </>
     )
 }
