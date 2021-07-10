@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .about {
 
     display: flex;
@@ -9,7 +11,36 @@
     margin-bottom: 10%;
 
 
+    .title {
 
+        padding-bottom: 2rem;
+
+
+        h3 {
+            position: relative;
+            font-size: var(--fz-section-title-md);
+            color: var(--lightest-slate);
+            overflow: hidden;
+
+            span {
+                color: var(--green);
+                margin-right: 10px;
+            }
+
+
+            &::after {
+                content: '';
+                width: 90%;
+                position: absolute;
+                margin-left: 30px;
+                top: 15px;
+                border-top: 1px solid var(--slate);
+            }
+
+        }
+
+
+    }
 
 
     .content {
@@ -17,40 +48,14 @@
         flex-direction: row;
 
 
+
+
+
         .left {
 
             width: 70%;
 
-            .title {
 
-                padding-bottom: 2rem;
-
-
-                h3 {
-                    position: relative;
-                    font-size: var(--fz-section-title-md);
-                    color: var(--lightest-slate);
-                    overflow: hidden;
-
-                    span {
-                        color: var(--green);
-                        margin-right: 10px;
-                    }
-
-
-                    &::after {
-                        content: '';
-                        width: 90%;
-                        position: absolute;
-                        margin-left: 30px;
-                        top: 15px;
-                        border-top: 1px solid var(--slate);
-                    }
-
-                }
-
-
-            }
 
             .description {
                 padding-bottom: 2rem;
@@ -94,4 +99,48 @@
 
         }
     }
+
+
+    @media (max-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        .title {
+            padding: 0;
+        }
+
+        .content {
+            flex-direction: column-reverse;
+
+            .left {
+                width: 100%;
+
+                .description {
+                    width: 95%;
+                    margin: 0 auto;
+                    font-size: var(--fz-lg);
+                }
+
+                .skills {
+                    width: 90%;
+                    margin: 0 auto;
+
+                }
+
+
+            }
+
+            .right {
+                margin: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+
+    }
+
 }

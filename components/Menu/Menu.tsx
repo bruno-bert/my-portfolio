@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Button from '../Button/Button'
 import HamburguerMenu from '../HamburguerMenu/HamburguerMenu'
 import Link from 'next/link'
@@ -7,11 +8,15 @@ interface Props {
 }
 
 const Menu = (props: Props) => {
+
+    const [menuState, setMenuState] = useState('hide')
+    const opened = menuState === 'show' ? styles.opened : ''
+
     return (
         <>
 
 
-            <ul className={styles.menu}>
+            <ul className={`${styles.menu} ${opened}`} >
                 <li>
                     <span>01.</span>
                     <span><Link href="#aboutme">About Me</Link></span>
@@ -40,7 +45,7 @@ const Menu = (props: Props) => {
             </ul>
 
 
-            <HamburguerMenu />
+            <HamburguerMenu menuState={menuState} setMenuState={setMenuState} />
 
         </>
     )

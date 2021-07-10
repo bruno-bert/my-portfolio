@@ -5,36 +5,47 @@
     font-family: var(--font-mono);
     margin: 0;
 
-}
+    li {
+        padding: 10px;
+        line-height: 50px;
 
-.hidden {
-    display: hidden;
-}
+        font-size: var(--fz-xs);
 
-.menu li {
-    padding: 10px;
-    line-height: 50px;
-
-    font-size: var(--fz-xs);
-
-    span {
-        color: var(--lightest-slate);
-
-        //letter-spacing: 0.1rem;
+        span {
+            color: var(--lightest-slate);
 
 
-        :hover {
+            :hover {
+                color: var(--green);
+            }
+        }
+
+        span:nth-child(1) {
             color: var(--green);
         }
+
+
     }
-
-    span:nth-child(1) {
-        color: var(--green);
-    }
-
-
 
     @media (max-width: $breakpoint-md) {
         display: none;
+
+        &.opened {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+
+            justify-content: center;
+            align-items: center;
+
+            li {
+                padding: 20px 0;
+                font-size: var(--fz-xxl);
+
+
+            }
+
+        }
     }
+
 }

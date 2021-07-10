@@ -9,18 +9,24 @@ export const AboutMe = (props: Props) => {
 
         <section id="aboutme" className={styles.about}>
 
+            <div className={styles.title}>
+                <h3>
+                    <span>01.</span>
+                    About Me
+                </h3>
+            </div>
+
 
 
 
             <div className={styles.content}>
+
+
+
+
                 <div id="left" className={styles.left}>
 
-                    <div className={styles.title}>
-                        <h3>
-                            <span>01.</span>
-                            About Me
-                        </h3>
-                    </div>
+
 
 
                     <p className={styles.description}>

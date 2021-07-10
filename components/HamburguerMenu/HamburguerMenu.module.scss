@@ -12,32 +12,17 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        margin: 15px;
+        margin: 15px 0;
         cursor: pointer;
-        padding: 0 5px;
+        padding: 5px;
         transition: all 200ms ease-in-out;
+        width: 50px;
+        height: 50px;
+
 
         &:hover {
             background-color: var(--light-navy);
             border: 1px dashed var(--green);
-
-        }
-
-        &.opened {
-
-            span {
-                transition: all 200ms ease-in-out;
-                transform: rotate(-45deg) translate(-6px, 6px);
-
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-
-                &:nth-child(3) {
-                    width: 35px;
-                    transform: rotate(45deg) translate(-6px, -8px);
-                }
-            }
         }
 
         span {
@@ -54,6 +39,38 @@
 
             &:nth-child(3) {
                 width: 15px;
+            }
+        }
+
+
+
+
+
+        &.opened {
+
+            position: relative;
+
+
+            span {
+                margin-top: 0;
+                transition: all 200ms ease-in-out;
+
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    width: 35px;
+                    transform: rotate(-135deg);
+
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    width: 35px;
+                    transform: rotate(135deg);
+                    top: 24px;
+                }
             }
         }
 
