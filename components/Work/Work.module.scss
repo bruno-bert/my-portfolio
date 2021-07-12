@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .work {
 
     display: flex;
@@ -35,7 +37,11 @@
                 border-top: 1px solid var(--slate);
             }
 
+
         }
+
+
+
 
 
     }
@@ -48,6 +54,16 @@
     .content {
         display: flex;
         flex-direction: column;
+    }
 
+
+
+    @media (max-width: $breakpoint-md) {
+        width: 90%;
+        border: 1px solid green;;
+
+        .description {
+            width: 90%;
+        }
     }
 }

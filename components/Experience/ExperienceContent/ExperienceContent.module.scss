@@ -1,4 +1,10 @@
+@import "../../../styles/variables";
+
 .content {
+
+
+    
+    
 
 
     .title {
@@ -21,6 +27,8 @@
             position: relative;
             font-size: var(--fz-xl);
 
+            color: var(--slate);
+
             &::before {
 
                 content: "▹";
@@ -34,4 +42,17 @@
 
 
     }
+
+
+    @media (max-width: $breakpoint-md) {
+        .tasks {
+            li {
+                font-size: var(--fz-md);
+                padding: 8px;
+
+            }
+        }
+      
+    }
+
 }

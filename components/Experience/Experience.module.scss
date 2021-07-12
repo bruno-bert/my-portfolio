@@ -1,4 +1,9 @@
+@import "../../styles/variables";
+
 .experience {
+
+
+
 
     display: flex;
     flex-direction: column;
@@ -64,14 +69,14 @@
                     transition: background-color ease-in-out 250ms;
 
                     &:hover {
-                        background-color: var(--lightest-navy);
+                        background-color: var(--light-navy);
                         color: var(--green);
                         cursor: pointer;
                     }
 
                     &.active {
                         border-left: 2px solid var(--green);
-                        background-color: var(--lightest-navy);
+                        background-color: var(--light-navy);
                         color: var(--green);
                         cursor: pointer;
                     }
@@ -92,4 +97,73 @@
         }
 
     }
+
+
+
+
+
+
+    @media (max-width: $breakpoint-md) {
+        width: 90%;
+
+        .content{
+            .left {
+                ul li{
+                    font-size: var(--fz-xs);
+                }
+            }
+
+            .right {}
+            
+        }
+      
+    }
+
+
+    @media (max-width: $breakpoint-sm) {
+        width: 90%;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        .left{
+            overflow-y: hidden;
+            overflow-x: scroll;
+            
+            
+            ul{
+                
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                li{
+                    text-align: center;
+                    padding: 10px 10px;
+                    height: 70px;
+                    width: 150px;
+                    min-width: 150px;
+                    max-width: 200px;
+                    margin-bottom: 3px;
+
+                    &:hover {
+                        background-color: var(--light-navy);
+                        color: var(--green);
+                        cursor: pointer;
+                    }
+
+                    &.active {
+                        border: 0;
+                        border-bottom: 2px solid var(--green);
+                        background-color: var(--light-navy);
+                        color: var(--green);
+                        cursor: pointer;
+                    }
+
+                }
+            }
+        }
+        }
+    }
+    
 }
