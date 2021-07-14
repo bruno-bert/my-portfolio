@@ -27,7 +27,7 @@ const OtherProject = (props: Props) => {
                 {
                     data.stack &&
                     <ul className={styles.stack}>
-                        {data.stack.map((stack: string) => (<li>{stack}</li>)
+                        {data.stack.map((stack: string, index: number) => (<li key={index}>{stack}</li>)
                         )}
                     </ul>
                 }

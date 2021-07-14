@@ -1,12 +1,12 @@
+@import "../../styles/variables";
 .contact {
     display: flex;
     flex-direction: column;
 
-    width: 35%;
+    width: 45%;
     margin: 0 auto;
     margin-top: 200px;
     margin-bottom: 10%;
-
 
     .subtitle {
         color: var(--green);
@@ -40,6 +40,24 @@
         text-align: center;
         margin: 60px;
     }
+
+    @media (max-width: $breakpoint-xl) {
+        width: 80%;
+        .description{
+            width: 70%;
+        }
+
+    }
+
+
+    @media (max-width: $breakpoint-lg) {
+        width: 80%;
+        .description{
+            width: 70%;
+        }
+
+    }
+
 
 
 }

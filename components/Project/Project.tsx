@@ -11,7 +11,7 @@ const Project = (props: Props) => {
     const { data } = props
     const reverse = data.imagePosition == 'left' ? '' : styles.reverse
     const [fallbackSrc, setFallbackSrc] = useState<string>('')
-
+      
     return (
 
         <div className={`${styles.project} ${reverse}`}>
@@ -20,11 +20,16 @@ const Project = (props: Props) => {
             <div id="image" className={styles.image}>
                 {
                     data.image &&
-                    <Image src={fallbackSrc !== '' ? fallbackSrc : data.image} width={500} height={350} onError={() => setFallbackSrc('/placeholder.png')} />
+                    <Image src={fallbackSrc !== '' ? fallbackSrc : data.image} 
+                    layout={'fixed'}
+                    width={500} height={450} 
+                    onError={() => setFallbackSrc('/placeholder.png')} />
                 }
 
                 {!data.image &&
-                    <Image src="/placeholder.png" width={500} height={350} />
+                    <Image src="/placeholder.png" 
+                    layout={'fixed'}
+                    width={612} height={434}  />
                 }
             </div>
 

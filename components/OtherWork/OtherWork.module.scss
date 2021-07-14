@@ -1,9 +1,10 @@
+@import "../../styles/variables";
 .otherwork {
 
     display: flex;
     flex-direction: column;
 
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 200px;
     margin-bottom: 10%;
@@ -58,6 +59,11 @@
 
     }
 
+    @media (max-width: $breakpoint-lg) {
+        width: 80%;
+    }
+    
+
 
 
 
@@ -67,12 +73,23 @@
 
 
 
+
 .content {
+  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
+    margin: 0 auto;
 
 
+    @media (max-width: $breakpoint-lg) {
+        
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
 
 
 }

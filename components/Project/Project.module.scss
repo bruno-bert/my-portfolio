@@ -1,17 +1,27 @@
+@import "../../styles/variables";
+
 .project {
 
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    margin-bottom: 40px;
-
-
+    
+    margin-bottom: 50px;
+    position: relative;
+    justify-content: center;
+   
+   
 
     .image {
 
-        min-width: 50%;
+       
         z-index: 1;
-        align-self: center;
+
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+      
 
 
 
@@ -103,6 +113,77 @@
     }
 
 
+  
+    @media (max-width: $breakpoint-lg) {
+       
+        
+        
+        .image{
+            position: absolute;
+            height: 100%;
+            opacity: 0.20;
+            
+            width: 100%;
+            overflow-x: hidden;
+            
+        }
+
+        .content {
+            z-index: 2;
+            text-align: left;
+            width:80%;
+
+            .description{
+               
+                line-height: 25px;
+                padding: 25px 0;
+                background-color: unset;
+                z-index: 0;
+                box-shadow: unset;
+                border-radius: unset;
+                margin:unset;
+              
+                
+              
+            }
+
+            .links{
+                justify-content: flex-start;
+
+            }
+
+            .stack{
+                justify-content: flex-start;
+                
+            }
+
+
+            
+        }
+
+        &.reverse {
+           
+            .content {
+                .description {
+                    margin-right: unset;
+                }
+            }
+        }
+
+
+      
+
+        
+
+     
+        
+      
+
+       
+    }
+
+
+  
 
 
 }

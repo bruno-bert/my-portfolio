@@ -99,9 +99,15 @@
     }
 
 
+    @media (max-width: $breakpoint-xl) {
+        width: 70%;
 
+    }
 
+    @media (max-width: $breakpoint-lg) {
+        width: 80%;
 
+    }
 
     @media (max-width: $breakpoint-md) {
         width: 90%;

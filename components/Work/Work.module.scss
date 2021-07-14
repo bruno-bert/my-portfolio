@@ -1,16 +1,17 @@
 @import "../../styles/variables";
 
+
 .work {
 
     display: flex;
     flex-direction: column;
 
-    width: 50%;
+    width: 60%;
+    
     margin: 0 auto;
     margin-top: 200px;
     margin-bottom: 10%;
-
-
+   
     .title {
 
         padding-bottom: 2rem;
@@ -49,21 +50,17 @@
 
 
 
-
-
     .content {
         display: flex;
         flex-direction: column;
     }
 
-
-
     @media (max-width: $breakpoint-md) {
         width: 90%;
-        border: 1px solid green;;
 
-        .description {
-            width: 90%;
-        }
     }
+
+   
+
+ 
 }
